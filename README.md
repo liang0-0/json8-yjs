@@ -1,24 +1,23 @@
 **目前不能用, 只是第一版的转换**
 
 后续任务
-```
-[ ] 修复 UpdatesTest.java 中的 testMergePendingUpdates 单测错误
-[ ] y-array.tests.js 的转换
-[ ] y-map.tests.js 的转换
-[ ] y-text.tests.js 的转换
-[ ] y-xml.tests.js 的转换
-[ ] 不使用int[]替代Uint8Array, 使用short(主要是为了减少内存占用大小)
-```
+ - [ ] 修复 UpdatesTest.java 中的 testMergePendingUpdates 单测错误
+ - [ ] y-array.tests.js 的转换
+ - [ ] y-map.tests.js 的转换
+ - [ ] y-text.tests.js 的转换
+ - [ ] y-xml.tests.js 的转换
+ - [ ] 不使用int[]替代Uint8Array, 使用short(主要是为了减少内存占用大小)
+
 **转换过程中的总结**
-1. 当前已经完成所有yjs的代码从js到.java的转换
-2. 其中也包含了lib0中的encoding, decoding的转换
-3. 包含awareness和cursor相关的代码转换
-4. 将Uint8Array替换为int[]
-5. Uint8Array需要使用short(目前为int[])解决js中的无符号byte问题(即使使用short[], 也会比js占用一倍的内存大小), 否则使用byte[]需要在每个读取byte的地方都要进行无符号转换(Byte.toUnsignedInt)
-6. encoding/decoding中, 利用了js中的 -0问题, 但是java中-0和0是完全相同的
-7. 整体上看, java还是没有js中的语法上的写法更简洁
-8. js中有一个地方利用了js的undefined和null的不同, 使用了java的固定的静态成员解决的
-9. 尽量使用js版本的吧, 自己新建一个中间的nodejs服务, 通过rest api调用java的接口, 当初要转换的时候就是是在不想搞一个感觉多余的中间nodejs服务
+ - [x] 当前已经完成所有yjs的代码从js到.java的转换
+ - [x] 其中也包含了lib0中的encoding, decoding的转换
+ - [x] 包含awareness和cursor相关的代码转换
+ - [x] 将Uint8Array替换为int[]
+ - [x] Uint8Array需要使用short(目前为int[])解决js中的无符号byte问题(即使使用short[], 也会比js占用一倍的内存大小), 否则使用byte[]需要在每个读取byte的地方都要进行无符号转换(Byte.toUnsignedInt)
+ - [x] encoding/decoding中, 利用了js中的 -0问题, 但是java中-0和0是完全相同的
+ - 整体上看, java还是没有js中的语法上的写法更简洁
+ - js中有一个地方利用了js的undefined和null的不同, 使用了java的固定的静态成员解决的
+ - 尽量使用js版本的吧, 自己新建一个中间的nodejs服务, 通过rest api调用java的接口, 当初要转换的时候就是是在不想搞一个感觉多余的中间nodejs服务
 
 # ![Yjs](https://yjs.dev/images/logo/yjs-120x120.png)
 
