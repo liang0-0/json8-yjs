@@ -14,20 +14,19 @@ import com.ai.types.vo.StructRefs;
 import com.ai.utils.codec.decoder.UpdateDecoder;
 import com.ai.utils.codec.decoder.UpdateDecoderV1;
 import com.ai.utils.codec.decoder.UpdateDecoderV2;
-import com.ai.utils.codec.encoder.*;
-import com.ai.utils.structstore.Structs;
+import com.ai.utils.codec.encoder.UpdateEncoder;
+import com.ai.utils.codec.encoder.UpdateEncoderV1;
+import com.ai.utils.codec.encoder.UpdateEncoderV2;
 import com.ai.utils.structstore.StructStore;
+import com.ai.utils.structstore.Structs;
 import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static com.ai.myutils.Printer.print;
 import static com.ai.utils.Updates.*;
 import static com.ai.utils.structstore.StructStore.findIndexSS;
-import static com.ai.utils.structstore.StructStore.getState;
 
 public class Encoding {
 

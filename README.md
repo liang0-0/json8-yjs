@@ -1,12 +1,14 @@
 **目前不能用, 只是第一版的转换**
-后续任务
-[]修复 UpdatesTest.java 中的 testMergePendingUpdates 单测错误
-[]y-array.tests.js 的转换
-[]y-map.tests.js 的转换
-[]y-text.tests.js 的转换
-[]y-xml.tests.js 的转换
-[] 不使用int[]替代Uint8Array, 使用short(主要是为了减少内存占用大小)
 
+后续任务
+```
+[ ] 修复 UpdatesTest.java 中的 testMergePendingUpdates 单测错误
+[ ] y-array.tests.js 的转换
+[ ] y-map.tests.js 的转换
+[ ] y-text.tests.js 的转换
+[ ] y-xml.tests.js 的转换
+[ ] 不使用int[]替代Uint8Array, 使用short(主要是为了减少内存占用大小)
+```
 **转换过程中的总结**
 1. 当前已经完成所有yjs的代码从js到.java的转换
 2. 其中也包含了lib0中的encoding, decoding的转换
